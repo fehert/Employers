@@ -28,9 +28,24 @@ namespace employers
                     legjobb++;
                 }
             }
-            Console.Write(tulajdonsaglista[legjobb].nev +" "+tulajdonsaglista[legjobb].kereset);
+            Console.Write(tulajdonsaglista[legjobb].nev +" "+tulajdonsaglista[legjobb].kereset+'\n');
 
-
+            foreach (var item in tulajdonsaglista)
+            {
+                if (item.kor==55)
+                {
+                    Console.Write(item.nev +'\n');
+                }
+            }
+            int szamlalo = 0;
+            foreach (var item in tulajdonsaglista)
+            {
+                if (item.kereset>50000)
+                {
+                    szamlalo++;
+                }
+            }
+            Console.Write(szamlalo +"\n");
             Console.ReadLine();
         }
     }
