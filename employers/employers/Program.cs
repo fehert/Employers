@@ -19,22 +19,22 @@ namespace employers
             }
             foreach (var b in tulajdonsaglista)
             {
-                Console.Write(b.nev +'\n');
+                Console.Write("Összes dolgozó neve:"+b.nev +'\n');
             }
             int legjobb = 0;
             for (int i = 0; i < tulajdonsaglista.Count; i++) {
                 if (tulajdonsaglista[i].kereset > tulajdonsaglista[legjobb].kereset)
                 {
-                    legjobb++;
+                    legjobb = i;
                 }
             }
-            Console.Write(tulajdonsaglista[legjobb].nev +" "+tulajdonsaglista[legjobb].kereset+'\n');
+            Console.Write("Legtöbbet kereső:"+tulajdonsaglista[legjobb].nev +" "+tulajdonsaglista[legjobb].kereset+'\n');
 
             foreach (var item in tulajdonsaglista)
             {
                 if (item.kor==55)
                 {
-                    Console.Write(item.nev +'\n');
+                    Console.Write("Akiknek 10 év van nyugdíjig:"+item.nev +'\n');
                 }
             }
             int szamlalo = 0;
@@ -45,7 +45,7 @@ namespace employers
                     szamlalo++;
                 }
             }
-            Console.Write(szamlalo +"\n");
+            Console.Write("Ennyien többet keresnek 50ezernél:"+szamlalo +"\n");
             Console.ReadLine();
         }
     }
