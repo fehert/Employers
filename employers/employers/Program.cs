@@ -21,6 +21,16 @@ namespace employers
             {
                 Console.Write(b.nev +'\n');
             }
+            int legjobb = 0;
+            for (int i = 0; i < tulajdonsaglista.Count; i++) {
+                if (tulajdonsaglista[i].kereset > tulajdonsaglista[legjobb].kereset)
+                {
+                    legjobb++;
+                }
+            }
+            Console.Write(tulajdonsaglista[legjobb].nev +" "+tulajdonsaglista[legjobb].kereset);
+
+
             Console.ReadLine();
         }
     }
